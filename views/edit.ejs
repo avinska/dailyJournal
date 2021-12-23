@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+
+<h1>Edit Post: <%= %></h1>
+<form class="" action="/posts/<%=foundPost._id%>?_method=PATCH" method="post">
+    <div class="form-group">
+        <label for="postTitle">Title</label>
+        <input class="form-control" type="text" name="postTitle" id="postTitle" value="<%=foundPost.title%>">
+        <label for="postBody">Post</label>
+        <textarea class="form-control" name="editBody" rows="5" cols="30">
+            <%= foundPost.body %>
+        </textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit" name="publish">Publish</button>
+
+</form>
+
+<%- include("partials/footer"); -%>

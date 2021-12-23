@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+
+<h1><%= foundPost.title %></h1>
+<p> <%= foundPost.body %> </p>
+
+<a href="/posts/<%=foundPost._id%>/edit">
+    <div>Edit</div>
+</a>
+<a href="/posts">
+    <div>Back to Home</div>
+</a>
+
+<%- include("partials/footer"); -%>
